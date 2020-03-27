@@ -12,16 +12,16 @@ La redes siamesas son un tipo de red neuronal que se crearon para el procesamien
 la diferenciación y aprendizaje de ciertas instancias del dataset con el objetivo de distinguir sus caracteristicas de forma profunda. Para ello, la red implementada
 mapea cada instancia a un espacio eucliadiano de dos dimensiones común para cada clase del dataset. Un forma gráfica de visualizar este tipo de redes, obtenida desde[1], se muestra a continuación:
 
-![alt text](https://github.com/JoseVillagranE/SiameseNetworks/Images/SiameseNeural.png)
+![alt text](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/SiameseNeural.png)
 
 
 Aunque la red neuronal es un de los aspactos más importantes del proyecto, no lo es únicamente, ya que la función de perdidad juega un rol importante en la diferenciación de instancias. Es por ello
 que se implementa un función de perdida de tripletas (Triplet learning), la cual apunta a distanciar cada instancia negativa desde un anchor, elegido de forma conveniente, y acercar las instancias positivas o instancias común a una misma clase.
 Tanto como la ecuación que gobierna dicha función de perdida, como una imagen ilustrativa, obtenidas desde[2], se muestran a continuación:
 
-![alt text](https://github.com/JoseVillagranE/SiameseNetworks/Images/TripletLoss.png)
+![alt text](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/TripletLoss.png)
 
-![alt text](https://github.com/JoseVillagranE/SiameseNetworks/Images/TripletLearning.png)
+![alt text](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/TripletLearning.png)
 
 Además, se implemento hard-mining, el cual se encarga de la busqueda del ejemplo o instancia más dificil de distinguir, con respecto al anchor, por parte de la red neuronal. 
 

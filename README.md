@@ -29,6 +29,8 @@ Además, se implemento hard-mining, el cual se encarga de la busqueda del ejempl
 
 Para este proyecto se ocupo el dataset de tracking de objetos reales de TLP[3]. Dicho dataset cuenta con 50 escenas diferentes de videos. Totalizando un tiempo de 400 minutos de grabación y 676k Frames.
 
+![alt text](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/TLP.png)
+
 ### Referencias
 
 [1] Koch, G., Zemel, R., Salakhutdinov, R.: Siamese neural networks for one-shot image recognition.In: ICML Deep Learning Workshop, vol. 2 (2015)

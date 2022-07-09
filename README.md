@@ -41,13 +41,11 @@ Below are some results that were obtained for the clustering of 3 and 10 classes
 
 ![WoutTraining_3_train](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWoutTraining_3_traindata.png "Training Dataset") ![WoutTraining_3_val](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWoutTraining_3_valdata.png "Validation Dataset")
 
-![WTraining_3_train](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_3_traindata.png "Training Dataset") ![WTraining_3_val](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_3_valdata "Validation Dataset")
+![WTraining_3_train](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_3_traindata.png "Training Dataset") ![WTraining_3_val](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_3_valdata.png "Validation Dataset")
 
 Now, it's presented the results with 10 classes:
 
-![WoutTraining_10_train](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWoutTraining_10_traindata.png "Training Dataset") ![WoutTraining_10_val](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWoutTraining_10_valdata.png "Validation Dataset")
-
-![WTraining_10_train](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_10_traindata.png "Training Dataset") ![WTraining_10_val](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_10_valdata "Validation Dataset")
+![WTraining_10_train](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_10_traindata.png "Training Dataset") ![WTraining_10_val](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_10_valdata.png "Validation Dataset")
 
 Also, below is shown the reults of Silhoutte coefficient for 3 and 10 classes:
 

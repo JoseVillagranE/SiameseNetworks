@@ -1,35 +1,60 @@
 # Siamese Networks
 
-### Contenido del repositorio
+### Content
 
-Se implementan redes neuronales siamesas con aprendizaje de tripletas y hard-mining. Además se implementa el manejo
-del dataset TLP en pytorch y una métrica de evaluación de clusters con el objetivo de dar una evaluación cuantitativa de las técnicas ocupadas.
-Este repositorio no trae el dataset para su descarga, sin embargo, este se puede descargar desde [acá](https://amoudgl.github.io/tlp/).
+This repo contain an implementation of siamese neural networks for clustering task. The training of the nueral network considering a tiplet loss and hard sample mining. TLP dataset handling is also implemented and some clustering metrics. It's possible to download the TLP dataset from [here](https://amoudgl.github.io/tlp/).
 
-### Breve introducción teórica
+### Brief theorical introduction
 
-La redes siamesas son un tipo de red neuronal que se crearon para el procesamiento de dos o más entradas diferentes. Uno de los motivos para ello es
-la diferenciación y aprendizaje de ciertas instancias del dataset con el objetivo de distinguir sus caracteristicas de forma profunda. Para ello, la red implementada
-mapea cada instancia a un espacio eucliadiano de dos dimensiones común para cada clase del dataset. Un forma gráfica de visualizar este tipo de redes, obtenida desde[1], se muestra a continuación:
+Siamese neural networks are a type of neural networks that were created for the processing of two or more inputs. One of the reasons for it is the diferentiation and learning of some instances of the dataset to distinguish their characteristics in a deep way. For that, the neural networks implemented map each instance to a common two-dimensional Euclidean space for each class in the dataset. A graphic way to visualize this type of network is shown below [1]: 
 
 ![alt text](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/SiameseNeural.png)
 
-
-Aunque la red neuronal es un de los aspactos más importantes del proyecto, no lo es únicamente, ya que la función de perdidad juega un rol importante en la diferenciación de instancias. Es por ello
-que se implementa un función de perdida de tripletas (Triplet learning), la cual apunta a distanciar cada instancia negativa desde un anchor, elegido de forma conveniente, y acercar las instancias positivas o instancias común a una misma clase.
-Tanto como la ecuación que gobierna dicha función de perdida, como una imagen ilustrativa, obtenidas desde[2], se muestran a continuación:
+although the neural network is the most important aspect of this project, it's not the only one, since the loss function plays a fundamental role in the differentiation of instances. That is why the tiplet loss function is implemented, which aims to distance each negative instance from it's anchor, which is conveniently chosen, and fetch positive instances that belong to the same class. Both the loss function equation as an illustrative image that show the learning process [2] are shown below:
 
 ![alt text](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/TripletLoss.png)
 
 ![alt text](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/TripletLearning.png)
 
-Además, se implemento hard-mining, el cual se encarga de la busqueda del ejemplo o instancia más dificil de distinguir, con respecto al anchor, por parte de la red neuronal. 
+In addition to the above, it's common to find that the training of this neural networks implements hard sampling mining which aim to get the most difficult examples to learning from.
+
+For tasks based on clustering, it is convenient to implement metrics that allow evaluating how accurate the examples are grouping. 
+For this, the Silhouette coefficient method is implemented:
+
+![a_i](https://latex.codecogs.com/gif.latex?a%28i%29%20%3D%20%5Cfrac%7B1%7D%7B%7CC_i%7C%20-%201%7D%20%5Csum_%7Bj%20%5Cin%20C_i%2C%20i%20%5Cneq%20j%7D%20d%28i%2C%20j%29)
+
+![b_i](https://latex.codecogs.com/gif.latex?b%28i%29%20%3D%20%5Cmin_%7Bk%20%5Cneq%20i%7D%5Cfrac%7B1%7D%7B%7CC_k%7C%7D%20%5Csum_%7Bj%20%5Cin%20C_k%7D%20d%28i%2C%20j%29)
+
+![s_i](https://latex.codecogs.com/gif.latex?S%28i%29%20%3D%20%5Cfrac%7Bb%28i%29%20-%20a%28i%29%7D%7B%5Cmax%28a%28i%29%2C%20b%28i%29%29%7D)
+
+In short, this method evaluates how accurate an instance is relative to others in the same cluster or instances of the same class in other clusters.
 
 ### Dataset
 
-Para este proyecto se ocupo el dataset de tracking de objetos reales de TLP[3]. Dicho dataset cuenta con 50 escenas diferentes de videos. Totalizando un tiempo de 400 minutos de grabación y 676k Frames.
+This project contemplate the use of the dataset TLP [3]. This dataset counts with 50 different scenes of videos. Totaling a recording time of 400 minutes and 676k frames.
 
-![alt text](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/TLP.png)
+![TLP Dataset](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/TLP.png)
+
+### Results
+
+Below are some results that were obtained for the clustering of 3 and 10 classes, considering an AlexNet Convolutional Neural Network as a images processor. First, it's shown the results of the network without training and after of that, the results of the clustering with 5 epochs of training:
+
+![WoutTraining_3_train](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWoutTraining_3_traindata.png "Training Dataset") ![WoutTraining_3_val](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWoutTraining_3_valdata.png "Validation Dataset")
+
+![WTraining_3_train](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_3_traindata.png "Training Dataset") ![WTraining_3_val](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_3_valdata "Validation Dataset")
+
+Now, it's presented the results with 10 classes:
+
+![WoutTraining_10_train](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWoutTraining_10_traindata.png "Training Dataset") ![WoutTraining_10_val](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWoutTraining_10_valdata.png "Validation Dataset")
+
+![WTraining_10_train](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_10_traindata.png "Training Dataset") ![WTraining_10_val](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_10_valdata "Validation Dataset")
+
+Also, below is shown the reults of Silhoutte coefficient for 3 and 10 classes:
+
+![sil3](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/sil3.png "Silhoutte Coef. with 3 Classes")
+
+![sil10](https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/sil10.png "Silhoutte Coef. with 10 Classes")
+
 
 ### Referencias
 

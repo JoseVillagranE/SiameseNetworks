@@ -39,17 +39,17 @@ This project contemplate the use of the dataset TLP [3]. This dataset counts wit
 
 Below are some results that were obtained for the clustering of 3 and 10 classes, considering an AlexNet Convolutional Neural Network as a images processor. First, it's shown the results of the network without training and after of that, the results of the clustering with 5 epochs of training:
 
-<img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWoutTraining_3_traindata.png" width ="200" /> <img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWoutTraining_3_valdata.png" width ="200" />
+<img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWoutTraining_3_traindata.png" height="200" width ="400" /> <img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWoutTraining_3_valdata.png" height="200" width ="400" />
 
-<img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_3_traindata.png" width ="200" /> <img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_3_valdata.png" width ="200" />
+<img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_3_traindata.png" height="200" width ="400" /> <img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_3_valdata.png" height="200" width ="400" />
 
 Now, it's presented the results with 10 classes:
 
-<img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_10_traindata.png" width ="200" /> <img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_10_valdata.png" width ="200" />
+<img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_10_traindata.png" height="200" width ="400" /> <img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/AlexnetWTraining_10_valdata.png" height="200" width ="400" />
 
 Also, below is shown the reults of Silhoutte coefficient for 3 and 10 classes:
 
-<img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/sil3.png" width ="200" /> <img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/sil10.png" width ="200" />
+<img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/sil3.png" height="200" width ="400" /> <img src = "https://github.com/JoseVillagranE/SiameseNetworks/blob/master/Images/sil10.png" height="200" width ="400" />
 
 ### Referencias
 
